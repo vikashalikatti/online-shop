@@ -23,7 +23,7 @@
 					</a> 
 					<ul class="nav">
 					<input type="search" placeholder="Search">
-						<button type="button" class="btn btn-primary">
+						<button type="button" class="btn btn-primary" style="color: #2a2a2a">
 							<i class="fas fa-search"></i>
 						</button>
 					</ul>
