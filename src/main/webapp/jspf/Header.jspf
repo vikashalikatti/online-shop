@@ -1,0 +1,79 @@
+
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">
+
+<link rel="stylesheet" href="/css/templatemo-hexashop.css">
+
+<link rel="stylesheet" href="/css/owl-carousel.css">
+
+<link rel="stylesheet" href="/css/lightbox.css">
+<script src="https://kit.fontawesome.com/49b30a67fc.js" crossorigin="anonymous"></script>
+<header class="header-area header-sticky">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<nav class="main-nav">
+					<!-- ***** Logo Start ***** -->
+					<a href="/jsp/Home.jsp" class="logo"> <img
+						src="/images/logo.png">
+					</a> 
+					<ul class="nav">
+					<input type="search" placeholder="Search">
+						<button type="button" class="btn btn-primary">
+							<i class="fas fa-search"></i>
+						</button>
+					</ul>
+					<!-- ***** Logo End ***** -->
+					<!-- ***** Menu Start ***** -->
+					<ul class="nav">
+						<li class="scroll-to-section"><a href="/jsp/Home.jsp"
+							class="active">Home</a></li>
+						<li class="scroll-to-section"><a href="#men">Men's</a></li>
+						<li class="scroll-to-section"><a href="#women">Women's</a></li>
+						<li class="scroll-to-section"><a href="#kids">Kid's</a></li>
+						<li class="submenu"><a href="javascript:;">Accounts</a>
+							<ul>
+								<li><a href="/admin/login">Admin</a></li>
+								<li><a href="/customer/login">Coustomer</a></li>
+								<li><a href="/merchant/login">Merchants</a></li>
+							</ul></li>
+					</ul>
+					<!-- ***** Menu End ***** -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<script src="/js/owl-carousel.js"></script>
+<script src="/js/accordions.js"></script>
+<script src="/js/datepicker.js"></script>
+<script src="/js/scrollreveal.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/imgfix.min.js"></script>
+<script src="/js/slick.js"></script>
+<script src="/js/lightbox.js"></script>
+<script src="/js/isotope.js"></script>
+
+<!-- Global Init -->
+<script src="/js/custom.js"></script>
+
+<script>
+	$(function() {
+		var selectedClass = "";
+		$("p").click(function() {
+			selectedClass = $(this).attr("data-rel");
+			$("#portfolio").fadeTo(50, 0.1);
+			$("#portfolio div").not("." + selectedClass).fadeOut();
+			setTimeout(function() {
+				$("." + selectedClass).fadeIn();
+				$("#portfolio").fadeTo(50, 1);
+			}, 500);
+
+		});
+	});
+</script>
