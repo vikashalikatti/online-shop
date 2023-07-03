@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="/css/lightbox.css">
 </head>
 <body>
+	<h1 id="successMessage">${fail}</h1>
+	<h1 id="failMessage">${pass}</h1>
 	<%@include file="../jspf/Header.jspf"%>
 	<div class="container">
 		<div class="centered-div">
@@ -39,7 +41,8 @@
 	<script src="/js/slick.js"></script>
 	<script src="/js/lightbox.js"></script>
 	<script src="/js/isotope.js"></script>
-	<script src="https://kit.fontawesome.com/49b30a67fc.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/49b30a67fc.js"
+		crossorigin="anonymous"></script>
 
 	<!-- Global Init -->
 	<script src="/js/custom.js"></script>
@@ -58,6 +61,22 @@
 
 			});
 		});
+	</script>
+	<script type="text/javascript">
+		var successMessage = document.getElementById("successMessage");
+		var failMessage = document.getElementById("failMessage");
+
+		// Check if the success message exists and display it as a pop-up alert
+		if (successMessage.innerText !== "") {
+			window.alert(successMessage.innerText);
+			successMessage.style.display = "none"; // Hide the success message element
+		}
+
+		// Check if the fail message exists and display it as a pop-up alert
+		if (failMessage.innerText !== "") {
+			window.alert(failMessage.innerText);
+			failMessage.style.display = "none"; // Hide the fail message element
+		}
 	</script>
 </body>
 </html>

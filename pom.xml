@@ -58,6 +58,13 @@
 			<artifactId>tomcat-jasper</artifactId>
 			<version>10.1.10</version>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.freemarker/freemarker -->
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.32</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

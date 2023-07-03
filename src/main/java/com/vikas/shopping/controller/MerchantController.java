@@ -12,7 +12,10 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.vikas.shopping.dto.Merchant;
+import com.vikas.shopping.helper.Login;
 import com.vikas.shopping.service.MerchantService;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/merchant")
@@ -40,5 +43,15 @@ public class MerchantController {
 	public ModelAndView signup(Merchant merchant, @RequestParam String date, @RequestParam MultipartFile pic)
 			throws IOException {
 		return merchantService.signup(merchant, date, pic);
+	}
+
+	@PostMapping("/verify")
+	public ModelAndView otp(@RequestParam int otp, @RequestParam String email, Merchant merchant) throws IOException {
+		return merchantService.verify_otp(otp, merchant, email);
+	}
+
+	@PostMapping("/login")
+	public ModelAndView login(Login login, HttpSession httpSession) {
+		return merchantService.login(login, httpSession);
 	}
 }

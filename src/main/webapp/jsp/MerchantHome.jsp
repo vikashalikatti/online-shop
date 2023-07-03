@@ -4,33 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Merchant Login</title>
+<title>Merhant Home</title>
 </head>
 <body>
 	<h1 id="successMessage">${fail}</h1>
 	<h1 id="failMessage">${pass}</h1>
-
-	<div class="header"></div>
-
-
-	<div class="container">
-		<div class="form">
-			<form action="/merchant/login" method="post">
-				Email: <input type="text" name="email"><br> Password: <input
-					type="password" name="password"><br>
-				<button>Login</button>
-				<button type="reset">Cancel</button>
-			</form>
-			<br> <a href="/merchant/forgotpassword">Forgot Password?</a> <br>
-			<br> <a href="/merchant/signup">New?Click here to Signup</a> <br>
-			<br> <a href="/"><button>Back</button></a>
-		</div>
-	</div>
-
-	<div class="footer"></div>
-
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<nav class="">
+	<a href="/logout"><button>Logout</button></a>
+	</nav>
+	
 	<script>
 		// Get the success and fail message elements
 		var successMessage = document.getElementById("successMessage");
@@ -48,7 +31,5 @@
 			failMessage.style.display = "none"; // Hide the fail message element
 		}
 	</script>
-
-
 </body>
 </html>

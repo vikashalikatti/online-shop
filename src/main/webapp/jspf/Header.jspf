@@ -21,15 +21,13 @@
 					<a href="/jsp/Home.jsp" class="logo"> <img
 						src="/images/logo.png">
 					</a> 
+					<!-- ***** Logo End ***** -->
+					<!-- ***** Menu Start ***** -->
 					<ul class="nav">
 					<input type="search" placeholder="Search">
 						<button type="button" class="btn btn-primary" style="color: #2a2a2a">
 							<i class="fas fa-search"></i>
 						</button>
-					</ul>
-					<!-- ***** Logo End ***** -->
-					<!-- ***** Menu Start ***** -->
-					<ul class="nav">
 						<li class="scroll-to-section"><a href="/jsp/Home.jsp"
 							class="active">Home</a></li>
 						<li class="scroll-to-section"><a href="#men">Men's</a></li>

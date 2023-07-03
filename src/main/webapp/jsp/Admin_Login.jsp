@@ -11,8 +11,8 @@
 <body>
 	<center>
 		<div class=container>
-			<h1 style="color: red">${fail}</h1>
-			<h1 style="color: red">${pass}</h1>
+			<h1 id="successMessage">${fail}</h1>
+			<h1 id="failMessage">${pass}</h1>
 			<h1>Login page</h1>
 			<form action="/admin/login" method="post">
 				<label for="name">Username:</label> <input type="text" id="name"
@@ -30,5 +30,23 @@
 	</center>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Get the success and fail message elements
+		var successMessage = document.getElementById("successMessage");
+		var failMessage = document.getElementById("failMessage");
+
+		// Check if the success message exists and display it as a pop-up alert
+		if (successMessage.innerText !== "") {
+			window.alert(successMessage.innerText);
+			successMessage.style.display = "none"; // Hide the success message element
+		}
+
+		// Check if the fail message exists and display it as a pop-up alert
+		if (failMessage.innerText !== "") {
+			window.alert(failMessage.innerText);
+			failMessage.style.display = "none"; // Hide the fail message element
+		}
+	</script>
+
 </body>
 </html>

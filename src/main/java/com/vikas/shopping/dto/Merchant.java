@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import org.springframework.stereotype.Component;
 
+import com.vikas.shopping.helper.OTP;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -22,9 +24,9 @@ public class Merchant {
 	private LocalDate dob;
 	private String gender;
 	private String address;
-	private int otp;
+	private boolean otpstatus;
 
 	@Lob
-	@Column(columnDefinition = "MEDIUMBLOB")
+	@Column(columnDefinition = "LONGBLOB")
 	byte[] picture;
 }
